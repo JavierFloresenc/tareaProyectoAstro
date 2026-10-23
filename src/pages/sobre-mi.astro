@@ -1,0 +1,57 @@
+---
+import Layout from './layouts/Layouts.astro';
+---
+
+<Layout title="Sobre Mí | Portafolio">
+  <main class="contenedor-sobre-mi">
+    <h1>Sobre Mí</h1>
+    
+    <section class="perfil">
+      <p>
+        Soy estudiante de 5to ciclo de Ingeniería de Sistemas con un enfoque fuerte en el desarrollo web. 
+        Actualmente compagino mis estudios universitarios con la gestión tecnológica y operativa de mis emprendimientos, 
+        Guía Académica y Manitos Unidas. Me apasiona aplicar la programación para optimizar procesos y crear soluciones digitales con impacto real.
+      </p>
+
+      <!-- Aquí está el enlace a tu PDF que está en la carpeta public/ -->
+      <a href="/cv_Javier.pdf" target="_blank" class="boton-cv">
+        Ver mi Currículum (PDF)
+      </a>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .contenedor-sobre-mi {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #333;
+    text-align: center;
+  }
+
+  .perfil p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+
+  /* Estilos para que el enlace parezca un botón profesional */
+  .boton-cv {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .boton-cv:hover {
+    background-color: #004494;
+    transform: translateY(-2px);
+  }
+</style>
