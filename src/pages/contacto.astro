@@ -1,0 +1,159 @@
+---
+import Layout from './layouts/Layouts.astro';
+---
+
+<Layout title="Contacto | Portafolio">
+  <main class="contenedor-contacto">
+    <h1>Ponte en Contacto</h1>
+    <p class="descripcion">¿Tienes algún proyecto en mente o quieres conversar sobre desarrollo web e ingeniería? Envíame un mensaje.</p>
+
+    <div class="grid-contacto">
+      <!-- Tarjeta de Información -->
+      <section class="info-contacto">
+        <h2>Mis Datos</h2>
+        <ul class="lista-datos">
+          <li>
+            <strong>Ubicación:</strong> Comas, Lima, Perú
+          </li>
+          <li>
+            <strong>GitHub:</strong> 
+            <a href="https://github.com/JavierFloresenc" target="_blank">github.com/JavierFloresenc</a>
+          </li>
+          <li>
+            <strong>Email:</strong> 
+            <a href="mailto:JavierFloresEnc@email.com">JavierFloresEnc@email.com</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Maquetación de Formulario -->
+      <section class="formulario-contacto">
+        <h2>Envíame un mensaje</h2>
+        <form>
+          <div class="grupo-input">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+          </div>
+          
+          <div class="grupo-input">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+          </div>
+          
+          <div class="grupo-input">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¿En qué te puedo ayudar?"></textarea>
+          </div>
+          
+          <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .contenedor-contacto {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  .descripcion {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+  }
+
+  /* Usamos CSS Grid para poner la info al lado del formulario en pantallas grandes */
+  .grid-contacto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .info-contacto, .formulario-contacto {
+    background-color: #ffffff;
+    border: 1px solid #eaeaeb;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  h2 {
+    color: #0056b3;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .lista-datos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .lista-datos li {
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .lista-datos a {
+    color: #0056b3;
+    text-decoration: none;
+  }
+
+  .lista-datos a:hover {
+    text-decoration: underline;
+  }
+
+  /* Estilos del formulario */
+  .grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  .grupo-input label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+  }
+
+  .grupo-input input, .grupo-input textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+
+  .grupo-input input:focus, .grupo-input textarea:focus {
+    outline: none;
+    border-color: #0056b3;
+  }
+
+  .boton-enviar {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+  }
+
+  .boton-enviar:hover {
+    background-color: #004494;
+  }
+</style>

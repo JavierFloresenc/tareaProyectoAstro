@@ -1,8 +1,117 @@
 ---
 import Layout from './layouts/Layouts.astro';
 ---
-<Layout title="Inicio | Mi Portafolio">
-  <h1>Bienvenido a mi Portafolio</h1>
-  <p>Explora mis proyectos y conoce más sobre mi experiencia y habilidades.</p>
+<Layout title="Inicio | Portafolio de Javier Flores">
+  <main class="contenedor-inicio">
+    <section class="hero">
+      <span class="etiqueta">¡Hola! Bienvenido a mi espacio digital</span>
+      
+      <h1>Soy <span class="destacado">Javier Flores</span></h1>
+      <h2>Desarrollador Web y Estudiante de Ingeniería de Sistemas</h2>
+      
+      <p class="resumen">
+        Me especializo en crear interfaces web adaptativas y soluciones tecnológicas eficientes utilizando JavaScript, HTML y CSS. 
+        Combino mi formación en sistemas con experiencia real en la gestión y digitalización de negocios.
+      </p>
+
+      <div class="botones-accion">
+        <a href="/proyectos" class="boton-primario">Ver mis proyectos</a>
+        <a href="/contacto" class="boton-secundario">Contactar</a>
+      </div>
+    </section>
+  </main>
 </Layout>
 
+<style>
+  .contenedor-inicio {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Centra el contenido verticalmente en la pantalla */
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .etiqueta {
+    display: inline-block;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+  }
+
+  /* Le damos un color azul profesional a tu nombre para que resalte */
+  .destacado {
+    color: #0056b3;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: 500;
+    margin: 0 0 2rem 0;
+  }
+
+  .resumen {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 3rem auto;
+  }
+
+  /* Contenedor Flexbox para alinear los botones */
+  .botones-accion {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los botones bajen si la pantalla es muy pequeña */
+  }
+
+  .boton-primario, .boton-secundario {
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .boton-primario {
+    background-color: #0056b3;
+    color: white;
+    border: 2px solid #0056b3;
+  }
+
+  .boton-primario:hover {
+    background-color: #004494;
+    border-color: #004494;
+    transform: translateY(-2px);
+  }
+
+  .boton-secundario {
+    background-color: transparent;
+    color: #0056b3;
+    border: 2px solid #0056b3;
+  }
+
+  .boton-secundario:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+  }
+</style>
