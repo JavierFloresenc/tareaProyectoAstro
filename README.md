@@ -88,7 +88,8 @@ Se probó la secuencia de comandos para controlar procesos invisibles en la term
 - **Comando ejecutado:** `pnpm astro build`
 - **Explicación:** El proceso de `build` genera la versión final estática del sitio y exige una sintaxis perfecta. Para probar esto, se provocó un error tipográfico intencional (dejando una etiqueta HTML abierta). La terminal detuvo el proceso y arrojó un error. Tras corregir la etiqueta en el código fuente, se volvió a ejecutar el comando y el proyecto compiló exitosamente, demostrando la rigurosidad de la herramienta.
 
-> **[INSERTA AQUÍ LA CAPTURA DE PANTALLA 5: Tu terminal mostrando el error rojo primero, y luego el mensaje de éxito de compilación tras arreglarlo]**
+![Ejecución del error ](./public/Error.png)
+![Ejecución de la solución ](./public/Solucion.png)
 
 ## 👀 Want to learn more?
 
